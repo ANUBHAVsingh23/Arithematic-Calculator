@@ -1,0 +1,9 @@
+:root{--bg:#f3f4f6;--panel:#111827;--btn:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{background:var(--bg);font-family:Segoe UI,Roboto,Arial,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}
+.calc{width:320px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);overflow:hidden}
+.display{background:#111827;color:#fff;padding:20px 16px;font-size:36px;text-align:right}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px;background:linear-gradient(180deg,#fff,#f9fafb)}
+button{font-size:18px;padding:16px;border-radius:8px;border:0;background:var(--btn);cursor:pointer}
+button[data-action="op"],button[data-action="equals"]{background:var(--accent);color:#fff}
+button.wide{grid-column:span 2}

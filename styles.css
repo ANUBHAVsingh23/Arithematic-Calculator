@@ -1,0 +1,11 @@
+:root{--bg:#f7f7fb;--card:#fff;--accent:#3b82f6}
+*{box-sizing:border-box;font-family:Segoe UI,Roboto,Arial,sans-serif}
+body{background:var(--bg);margin:0;padding:24px;display:flex;align-items:flex-start;justify-content:center}
+.container{width:760px;max-width:96%}
+h1{margin:0 0 12px}
+.card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 4px rgba(16,24,40,.06);margin-bottom:12px}
+.row{display:flex;gap:8px;align-items:center}
+input[type=number],input[type=text],select{padding:8px;border:1px solid #ddd;border-radius:6px;min-width:0}
+button{padding:8px 12px;border-radius:6px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.result{margin-top:8px;color:#111}
+footer{margin-top:8px;color:#666;font-size:13px}

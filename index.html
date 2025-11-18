@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body { background: #f0f4ff; font-family: Arial, sans-serif; }
+      .container { max-width: 600px; margin: 40px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+      h1 { text-align: center; }
+      .card { margin-top: 20px; padding: 20px; border-radius: 10px; background: #fafafa; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+      .row { display: flex; gap: 10px; margin-top: 10px; }
+      input, select, button { padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex: 1; }
+      button { cursor: pointer; background: #4b7bec; color: white; border: none; transition: 0.3s; }
+      button:hover { background: #3867d6; }
+      .result { margin-top: 10px; font-weight: bold; }
+      .theme-toggle { margin-top: 20px; text-align: center; }
+      .theme-btn { padding: 10px 20px; border-radius: 8px; border: none; background: #20bf6b; color: white; cursor: pointer; transition: 0.3s; }
+      .theme-btn:hover { background: #0fb96b; }
+      body.dark { background: #1e272e; color: white; }
+      body.dark .container { background: #2f3640; color: white; }
+      body.dark input, body.dark select { background: #3d3d3d; color: white; border: 1px solid #666; }
+      body.dark button { background: #485460; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+
+      <section class="card">
+        <h2>Binary operation (backend)</h2>
+        <div class="row">
+          <input id="a" type="number" placeholder="a" />
+          <select id="op">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">×</option>
+            <option value="div">÷</option>
+            <option value="pow">^</option>
+          </select>
+          <input id="b" type="number" placeholder="b" />
+          <button id="calcBtn">Calculate (server)</button>
+        </div>
+        <div id="result" class="result">Result: —</div>
+      </section>
+
+      <section class="card">
+        <h2>Quick expression (client-side)</h2>
+        <div class="row">
+          <input id="expr" type="text" placeholder="e.g. 1 + 2 * (3 - 4)" />
+          <button id="evalBtn">Evaluate (client)</button>
+        </div>
+        <div id="exprResult" class="result">Result: —</div>
+      </section>
+
+      <div class="theme-toggle">
+        <button class="theme-btn" id="themeBtn">Toggle Dark Mode</button>
+      </div>
+
+      
+    </div>
+
+    <script>
+      document.getElementById('themeBtn').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
